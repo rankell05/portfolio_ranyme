@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ranyme Kellakh | Systems Security Student</title>
+<meta name="description" content="Portfolio of Ranyme Kellakh, Systems Security student at ENSTA. AI, Linux, React, React Native and UI/UX design.">
+<script>try{var t=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header>
+  <nav class="wrap" aria-label="Main">
+    <a class="logo" href="#top">RK</a>
+    <ul id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#playground">Playground</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="actions">
+      <button class="theme" id="theme" type="button" aria-label="Switch between light and dark theme"><span aria-hidden="true">◐</span></button>
+      <button class="menu" id="menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span aria-hidden="true">☰</span></button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <small>Systems Security student at ENSTA, Algeria</small>
+    <h1>
+      <span class="sr">Ranyme Kellakh</span>
+      <span id="decode" aria-hidden="true">Ranyme Kellakh</span>
+    </h1>
+    <p class="lead">I build interfaces, train AI models to explain themselves, and I'm learning how to protect the systems underneath it all.</p>
+    <p class="rotator">Right now I'm into <b id="rot">explaining AI models (XAI)</b></p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn ghost" href="#contact">Say hello</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <h2>Hi, I'm Ranyme</h2>
+        <p>I'm a Systems Security engineering student at ENSTA, after two years of computer science prep. I like understanding how things work under the hood, and I like making them pleasant to use.</p>
+        <p>My work sits between three worlds: interfaces in React and Figma, AI in Python and PyTorch (in April 2026 I worked on making satellite-image classifiers explainable at the Algerian Space Agency), and security, which is what I'm studying to keep all of it safe.</p>
+        <p>I'm curious about how technology and creativity connect people. I speak Arabic, French, English and some Kabyle, and I love learning about other cultures. Away from the screen I enjoy swimming, cycling, hiking and Yoseikan Budo.</p>
+      </div>
+      <ul class="facts">
+        <li><span>Studying</span><b>Systems Security</b></li>
+        <li><span>School</span><b>ENSTA, Bordj el Kiffan</b></li>
+        <li><span>Latest</span><b>AI internship, Algerian Space Agency</b></li>
+        <li><span>Based in</span><b>Boumerdes, Algeria</b></li>
+        <li><span>Languages</span><b>Arabic, French, English, Kabyle</b></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <div class="tabs" role="group" aria-label="Filter skills" id="tabs">
+        <button class="tab" data-f="all" aria-pressed="true">All</button>
+        <button class="tab" data-f="sec" aria-pressed="false">Systems &amp; networks</button>
+        <button class="tab" data-f="dev" aria-pressed="false">Development</button>
+        <button class="tab" data-f="ai" aria-pressed="false">AI &amp; data</button>
+        <button class="tab" data-f="des" aria-pressed="false">Design &amp; tools</button>
+      </div>
+      <div class="skills" id="skills-grid"></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <article class="exp">
+        <div>
+          <h3>AI / Geospatial AI internship project</h3>
+          <p class="meta">Algerian Space Agency, Sidi Abdellah Science and Technology Pole &middot; April 2026</p>
+        </div>
+        <p>Explainable AI (XAI) for geospatial deep learning: making satellite-image classification easier to interpret.</p>
+        <div class="stats">
+          <div class="stat"><b>21</b><span>land-use classes</span></div>
+          <div class="stat"><b>80/10/10</b><span>train / val / test split</span></div>
+          <div class="stat"><b>VGG16</b><span>pretrained model</span></div>
+          <div class="stat"><b>224&times;224</b><span>input size</span></div>
+        </div>
+        <ul class="pts">
+          <li>Prepared the UC Merced Land Use dataset: class distribution analysis, resizing and ImageNet normalization.</li>
+          <li>Studied XAI approaches (Grad-CAM, SHAP and LIME) to understand model predictions and feature importance.</li>
+          <li>Trained and evaluated the model with PyTorch, using Top-1 / Top-5 accuracy, per-class F1-score and confusion analysis.</li>
+          <li>Gained practical exposure to computer vision, transfer learning and explainable AI.</li>
+        </ul>
+        <ul class="tags"><li>Python</li><li>PyTorch</li><li>Computer vision</li><li>Transfer learning</li><li>XAI</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>CS Students Dashboard</h3>
+          <p>A student-data dashboard built with Python: datasets, analysis and visualization in an interactive app.</p>
+          <ul class="tags"><li>Python</li><li>Data analysis</li><li>Visualization</li></ul>
+          <div class="more" id="p1">
+            <ul>
+              <li>Organized the project with data files, notebooks, application code and dependencies.</li>
+              <li>Applied data-processing and visualization concepts to present student-related information.</li>
+            </ul>
+          </div>
+          <button aria-expanded="false" aria-controls="p1">Show details</button>
+        </article>
+        <article class="project">
+          <h3>GeoAI Lab: satellite images</h3>
+          <p>Classification of Sentinel-2 satellite imagery using spectral indices.</p>
+          <ul class="tags"><li>Sentinel-2</li><li>NDVI</li><li>NDBI</li><li>NDWI</li></ul>
+          <div class="more" id="p2">
+            <ul>
+              <li>Worked with spectral indices including NDVI, NDBI and NDWI.</li>
+              <li>Explored supervised and unsupervised classification methods.</li>
+            </ul>
+          </div>
+          <button aria-expanded="false" aria-controls="p2">Show details</button>
+        </article>
+        <article class="project">
+          <h3>ENSTEINS club website</h3>
+          <p>Official website of the school's scientific club, built with React.</p>
+          <ul class="tags"><li>React</li><li>JavaScript</li><li>Teamwork</li></ul>
+          <div class="more" id="p3">
+            <ul>
+              <li>Frontend developer in a team of 5, working closely with designers and backend developers.</li>
+              <li>Built reusable components.</li>
+              <li>Improved the user experience of the site.</li>
+            </ul>
+          </div>
+          <button aria-expanded="false" aria-controls="p3">Show details</button>
+        </article>
+        <article class="project">
+          <h3>CodeBattle mobile app</h3>
+          <p>A first-cycle project: an app where students compete against each other on programming challenges.</p>
+          <ul class="tags"><li>Figma</li><li>React Native</li><li>UI/UX</li></ul>
+          <div class="more" id="p4">
+            <ul>
+              <li>Designed the mockups and prototypes in Figma.</li>
+              <li>Helped develop the frontend with React Native.</li>
+            </ul>
+          </div>
+          <button aria-expanded="false" aria-controls="p4">Show details</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="playground">
+    <div class="wrap">
+      <h2>Playground: a tiny cipher</h2>
+      <p class="intro">The Caesar cipher shifts every letter along the alphabet. It is one of the oldest ciphers and trivial to break, which is exactly why it's a good first lesson: security starts with knowing what is weak. Type something and move the slider.</p>
+      <div class="cipher">
+        <label for="c-in">Your text</label>
+        <input id="c-in" type="text" value="Hello, I'm Ranyme" maxlength="80" autocomplete="off">
+        <label for="c-shift">Shift: <output id="c-val">3</output></label>
+        <input id="c-shift" type="range" min="0" max="25" value="3">
+        <div class="out" aria-live="polite"><span>Result</span><code id="c-out"></code></div>
+        <button class="btn ghost" id="c-brute" type="button">Show all 25 possible shifts</button>
+        <ol class="brute" id="c-list" hidden></ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <ol class="timeline">
+        <li>
+          <time>September 2023 to June 2025</time>
+          <h3>Preparatory cycle in Computer Science</h3>
+          <p>National Higher School of Advanced Technologies, Bordj el Kiffan</p>
+        </li>
+        <li>
+          <time>September 2025 to now</time>
+          <h3>Engineering cycle in Systems Security</h3>
+          <p>National Higher School of Advanced Technologies, Bordj el Kiffan</p>
+        </li>
+      </ol>
+      <div class="langs">
+        <div class="lang"><strong>Arabic</strong><span>Native</span></div>
+        <div class="lang"><strong>French</strong><span>C1, advanced</span></div>
+        <div class="lang"><strong>English</strong><span>C1</span></div>
+        <div class="lang"><strong>Kabyle</strong><span>Spoken and understood, limited writing</span></div>
+      </div>
+      <h3 style="margin:3rem 0 1rem">Areas of interest</h3>
+      <ul class="interests">
+        <li><b>Cybersecurity</b><span>Threat intelligence, vulnerability analysis, and secure system architectures.</span></li>
+        <li><b>Artificial intelligence</b><span>Explainable AI (XAI), computer vision, and applied machine learning models.</span></li>
+        <li><b>Systems &amp; networks</b><span>Operating system internals, Linux environments, and network infrastructure.</span></li>
+        <li><b>UI/UX &amp; product design</b><span>User interface design, interactive prototyping in Figma, and design systems.</span></li>
+        <li><b>Languages &amp; localization</b><span>Technical translation, localization, and multilingual communication in international environments.</span></li>
+        <li><b>Business &amp; technology</b><span>How technology strategy, digital transformation, and organizational innovation create impact.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <h2>Say hello</h2>
+        <p>A question, an idea, a project to build together? Send me an email and I'll reply as soon as I can.</p>
+        <a class="btn" href="mailto:ar.kellakh@ensta.edu.dz">Email me</a>
+        <a class="btn" href="https://github.com/rankell05">GitHub</a> 
+        <button class="btn copy" id="copy" type="button">Copy address</button>
+        
+        
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">&copy; <span id="year"></span> Ranyme Kellakh. Built with HTML, CSS and JavaScript.</div></footer>
+
+<a href="#top" class="totop" id="totop" aria-label="Back to top">↑</a>
+<script src="js/script.js"></script>
+</body>
+</html>
